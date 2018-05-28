@@ -416,7 +416,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Silhouette</string>
+    <string>Skeleton</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -485,6 +485,32 @@
    </property>
    <property name="text">
     <string>How to use it</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="labelComboBox">
+   <property name="geometry">
+    <rect>
+     <x>735</x>
+     <y>430</y>
+     <width>120</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelLabel">
+   <property name="geometry">
+    <rect>
+     <x>765</x>
+     <y>400</y>
+     <width>60</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Label</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

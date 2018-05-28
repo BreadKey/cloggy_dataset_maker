@@ -20,6 +20,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.inputImageLabelbasicCursor = QtCore.Qt.ArrowCursor
         self.inputImageLabelWaitCursor = QtCore.Qt.WaitCursor
         self.inputImageLabelDrawRectCursor = QtCore.Qt.CrossCursor
+        self.labels = ['stomachache', 'exiting', 'nervous', 'very_aggressive', 'butt_scooting']
 
         self.initUI()
         self.show()
@@ -37,6 +38,9 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.markerSize = 3
         self.isMarking = False
 
+        self.silhouette = None
+
+
     def initUI(self):
         self.addDirectoryList()
         self.directoryListWidget.itemDoubleClicked.connect(self.directoryListDoubleClicked)
@@ -50,8 +54,24 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.inputImageLabel.setCursor(self.inputImageLabelbasicCursor)
 
         self.getSilhouetteButton.clicked.connect(self.getSilhouette)
+        self.saveSilhouetteButton.clicked.connect(self.saveSilhouette)
 
         self.howToUseItButton.clicked.connect(self.howToUseIt)
+
+        self.labelComboBox.addItems(self.labels)
+
+    def initInput(self):
+        self.imageInProcess = None
+        self.maskForGrabcut = None
+        self.isDrawingRect = False
+        self.isShiftKeyPressed = False
+        self.isMarking = False
+        self.silhouette = None
+        self.rectXValueLabel.setText("0")
+        self.rectYValueLabel.setText("0")
+        self.rectWidthValueLabel.setText("0")
+        self.rectHeightValueLabel.setText("0")
+        self.rectForGrabcut = (0, 0, 0, 0)
 
     def addDirectoryList(self):
         self.directoryListWidget.clear()
@@ -88,10 +108,11 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
             filename = os.path.split(path)[1]
             fileformat = str.split(filename, '.')[1]
 
-            if fileformat == 'png' or fileformat == 'jpg':
+            if fileformat == 'png' or fileformat == 'jpg' or fileformat == 'JPG':
                 image:QtGui.QImage = QtGui.QImage(path)
                 self.setImageToLabel(self.inputImageLabel, image, resizeLabel=True)
                 self.imageSizeLabel.setText("Image size : {} x {}".format(image.width(), image.height()))
+                self.imageSizeLabel.adjustSize()
                 self.isInputImageExist = True
                 self.imagePath = path
                 self.initInput()
@@ -246,22 +267,30 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
                 bgdModel = np.zeros((1, 65), np.float64)
                 fgdModel = np.zeros((1, 65), np.float64)
                 cv2.grabCut(img, self.maskForGrabcut, self.rectForGrabcut, bgdModel, fgdModel, 1, cv2.GC_INIT_WITH_MASK)
-            silhouette = np.where((self.maskForGrabcut == 1) + (self.maskForGrabcut == 3), 255, 0).astype('uint8')
-            qimg = self.npArrayToQImage(silhouette)
+            self.silhouette = np.where((self.maskForGrabcut == 1) + (self.maskForGrabcut == 3), 255, 0).astype('uint8')
+            qimg = self.npArrayToQImage(self.silhouette)
             self.setImageToLabel(self.silhouetteLabel, qimg)
         self.setCursor(self.inputImageLabelbasicCursor)
 
-    def initInput(self):
-        self.imageInProcess = None
-        self.maskForGrabcut = None
-        self.isDrawingRect = False
-        self.isShiftKeyPressed = False
-        self.isMarking = False
-        self.rectXValueLabel.setText("0")
-        self.rectYValueLabel.setText("0")
-        self.rectWidthValueLabel.setText("0")
-        self.rectHeightValueLabel.setText("0")
-        self.rectForGrabcut = (0, 0, 0, 0)
+    def saveSilhouette(self):
+        if self.silhouette is not None:
+            imageName = self.getImageName(self.imagePath)
+            imageName = imageName.split('.')[0] + '_silhouette.jpg'
+            label = self.labelComboBox.currentText()
+
+            savePath = os.path.join(os.getcwd(),'results/silhouettes/' + label)
+
+            try:
+                os.mkdir(savePath)
+            except:
+                #directory is already exist
+                pass
+
+            cv2.imwrite(os.path.join(savePath, imageName), self.silhouette)
+
+    def getImageName(self, path):
+        if path is not None:
+            return os.path.split(path)[1]
 
     def howToUseIt(self):
         QMessageBox.about(self, "How to use it", "1. Select the cloggy image you want to get a data."

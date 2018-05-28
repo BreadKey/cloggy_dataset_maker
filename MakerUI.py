@@ -146,6 +146,13 @@ class Ui_Maker_Dialog(object):
         self.howToUseItButton = QtWidgets.QPushButton(Maker_Dialog)
         self.howToUseItButton.setGeometry(QtCore.QRect(735, 240, 120, 28))
         self.howToUseItButton.setObjectName("howToUseItButton")
+        self.labelComboBox = QtWidgets.QComboBox(Maker_Dialog)
+        self.labelComboBox.setGeometry(QtCore.QRect(735, 430, 120, 28))
+        self.labelComboBox.setObjectName("labelComboBox")
+        self.labelLabel = QtWidgets.QLabel(Maker_Dialog)
+        self.labelLabel.setGeometry(QtCore.QRect(765, 400, 60, 15))
+        self.labelLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.labelLabel.setObjectName("labelLabel")
 
         self.retranslateUi(Maker_Dialog)
         QtCore.QMetaObject.connectSlotsByName(Maker_Dialog)
@@ -171,10 +178,21 @@ class Ui_Maker_Dialog(object):
         self.silhouetteLabel.setText(_translate("Maker_Dialog", "Silhouette"))
         self.silhouetteTextLabel.setText(_translate("Maker_Dialog", "Silhouette"))
         self.skeletonLabel.setText(_translate("Maker_Dialog", "Skeleton"))
-        self.skeletonTextLabel.setText(_translate("Maker_Dialog", "Silhouette"))
+        self.skeletonTextLabel.setText(_translate("Maker_Dialog", "Skeleton"))
         self.getSilhouetteButton.setText(_translate("Maker_Dialog", "Get"))
         self.saveSilhouetteButton.setText(_translate("Maker_Dialog", "Save"))
         self.saveSkeletonButton.setText(_translate("Maker_Dialog", "Save"))
         self.getSkeletonButton.setText(_translate("Maker_Dialog", "Get"))
         self.howToUseItButton.setText(_translate("Maker_Dialog", "How to use it"))
+        self.labelLabel.setText(_translate("Maker_Dialog", "Label"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Maker_Dialog = QtWidgets.QDialog()
+    ui = Ui_Maker_Dialog()
+    ui.setupUi(Maker_Dialog)
+    Maker_Dialog.show()
+    sys.exit(app.exec_())
 
