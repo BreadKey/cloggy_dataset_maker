@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
-    <height>600</height>
+    <width>1500</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,10 +19,10 @@
   <widget class="QListWidget" name="directoryListWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>50</y>
-     <width>120</width>
-     <height>500</height>
+     <x>15</x>
+     <y>75</y>
+     <width>180</width>
+     <height>750</height>
     </rect>
    </property>
    <property name="toolTip">
@@ -32,21 +32,26 @@
   <widget class="QListWidget" name="contentListWidget">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>50</y>
-     <width>120</width>
-     <height>500</height>
+     <x>210</x>
+     <y>75</y>
+     <width>180</width>
+     <height>750</height>
     </rect>
    </property>
   </widget>
   <widget class="QLabel" name="directories_label">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
-     <width>80</width>
-     <height>15</height>
+     <x>45</x>
+     <y>30</y>
+     <width>120</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Directories</string>
@@ -58,11 +63,16 @@
   <widget class="QLabel" name="contents_label">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>20</y>
-     <width>80</width>
-     <height>15</height>
+     <x>240</x>
+     <y>30</y>
+     <width>120</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Contents</string>
@@ -74,22 +84,46 @@
   <widget class="QScrollArea" name="inputImageScrollArea">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>50</y>
-     <width>400</width>
-     <height>300</height>
+     <x>450</x>
+     <y>75</y>
+     <width>600</width>
+     <height>450</height>
     </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>600</width>
+     <height>450</height>
+    </size>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QAbstractScrollArea::AdjustIgnored</enum>
    </property>
    <property name="widgetResizable">
     <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
    </property>
    <widget class="QWidget" name="scrollAreaWidgetContents">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>398</width>
-      <height>298</height>
+      <width>598</width>
+      <height>448</height>
      </rect>
     </property>
    </widget>
@@ -97,15 +131,21 @@
   <widget class="QLabel" name="inputImageLabel">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>50</y>
-     <width>400</width>
-     <height>300</height>
+     <x>450</x>
+     <y>75</y>
+     <width>600</width>
+     <height>450</height>
     </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>30</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -131,15 +171,23 @@
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
+   <property name="indent">
+    <number>0</number>
+   </property>
   </widget>
   <widget class="QLabel" name="inputImageTextLabel">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>20</y>
-     <width>80</width>
-     <height>16</height>
+     <x>650</x>
+     <y>30</y>
+     <width>200</width>
+     <height>24</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Input Image</string>
@@ -151,11 +199,16 @@
   <widget class="QLabel" name="rectXLabel">
    <property name="geometry">
     <rect>
-     <x>740</x>
-     <y>90</y>
-     <width>64</width>
-     <height>15</height>
+     <x>1110</x>
+     <y>135</y>
+     <width>96</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>x</string>
@@ -164,11 +217,16 @@
   <widget class="QLabel" name="rectYLabel">
    <property name="geometry">
     <rect>
-     <x>740</x>
-     <y>120</y>
-     <width>64</width>
-     <height>15</height>
+     <x>1110</x>
+     <y>180</y>
+     <width>96</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>y</string>
@@ -177,11 +235,16 @@
   <widget class="QLabel" name="rectWidthLabel">
    <property name="geometry">
     <rect>
-     <x>740</x>
-     <y>150</y>
-     <width>64</width>
-     <height>15</height>
+     <x>1110</x>
+     <y>225</y>
+     <width>96</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Width</string>
@@ -190,11 +253,16 @@
   <widget class="QLabel" name="rectHeightLabel">
    <property name="geometry">
     <rect>
-     <x>740</x>
-     <y>180</y>
-     <width>64</width>
-     <height>15</height>
+     <x>1110</x>
+     <y>270</y>
+     <width>96</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Height</string>
@@ -203,11 +271,16 @@
   <widget class="QLabel" name="rectXValueLabel">
    <property name="geometry">
     <rect>
-     <x>790</x>
-     <y>90</y>
-     <width>64</width>
-     <height>15</height>
+     <x>1185</x>
+     <y>135</y>
+     <width>96</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -225,11 +298,16 @@
   <widget class="QLabel" name="rectYValueLabel">
    <property name="geometry">
     <rect>
-     <x>790</x>
-     <y>120</y>
-     <width>64</width>
-     <height>15</height>
+     <x>1185</x>
+     <y>180</y>
+     <width>96</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -247,11 +325,16 @@
   <widget class="QLabel" name="rectWidthValueLabel">
    <property name="geometry">
     <rect>
-     <x>790</x>
-     <y>150</y>
-     <width>64</width>
-     <height>15</height>
+     <x>1185</x>
+     <y>225</y>
+     <width>96</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -269,11 +352,16 @@
   <widget class="QLabel" name="rectHeightValueLabel">
    <property name="geometry">
     <rect>
-     <x>790</x>
-     <y>180</y>
-     <width>64</width>
-     <height>15</height>
+     <x>1185</x>
+     <y>270</y>
+     <width>96</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -291,11 +379,16 @@
   <widget class="QLabel" name="imageSizeLabel">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>360</y>
-     <width>200</width>
-     <height>15</height>
+     <x>600</x>
+     <y>540</y>
+     <width>300</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Image size : </string>
@@ -307,11 +400,16 @@
   <widget class="QLabel" name="rectLabel">
    <property name="geometry">
     <rect>
-     <x>720</x>
-     <y>50</y>
-     <width>150</width>
-     <height>16</height>
+     <x>1080</x>
+     <y>75</y>
+     <width>225</width>
+     <height>24</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Rectangle for grabcut</string>
@@ -323,15 +421,15 @@
   <widget class="QLabel" name="silhouetteLabel">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>400</y>
-     <width>200</width>
-     <height>150</height>
+     <x>450</x>
+     <y>600</y>
+     <width>300</width>
+     <height>225</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>15</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -358,11 +456,16 @@
   <widget class="QLabel" name="silhouetteTextLabel">
    <property name="geometry">
     <rect>
-     <x>368</x>
-     <y>380</y>
-     <width>64</width>
-     <height>15</height>
+     <x>540</x>
+     <y>570</y>
+     <width>120</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Silhouette</string>
@@ -374,15 +477,15 @@
   <widget class="QLabel" name="skeletonLabel">
    <property name="geometry">
     <rect>
-     <x>500</x>
-     <y>400</y>
-     <width>200</width>
-     <height>150</height>
+     <x>750</x>
+     <y>600</y>
+     <width>300</width>
+     <height>225</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>15</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -409,11 +512,16 @@
   <widget class="QLabel" name="skeletonTextLabel">
    <property name="geometry">
     <rect>
-     <x>568</x>
-     <y>380</y>
-     <width>64</width>
-     <height>15</height>
+     <x>840</x>
+     <y>570</y>
+     <width>120</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Skeleton</string>
@@ -425,11 +533,16 @@
   <widget class="QPushButton" name="getSilhouetteButton">
    <property name="geometry">
     <rect>
-     <x>305</x>
-     <y>560</y>
-     <width>90</width>
-     <height>30</height>
+     <x>455</x>
+     <y>840</y>
+     <width>140</width>
+     <height>45</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Get</string>
@@ -438,11 +551,16 @@
   <widget class="QPushButton" name="saveSilhouetteButton">
    <property name="geometry">
     <rect>
-     <x>405</x>
-     <y>560</y>
-     <width>90</width>
-     <height>30</height>
+     <x>605</x>
+     <y>840</y>
+     <width>140</width>
+     <height>45</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Save</string>
@@ -451,11 +569,16 @@
   <widget class="QPushButton" name="saveSkeletonButton">
    <property name="geometry">
     <rect>
-     <x>605</x>
-     <y>560</y>
-     <width>90</width>
-     <height>30</height>
+     <x>905</x>
+     <y>840</y>
+     <width>140</width>
+     <height>45</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Save</string>
@@ -464,11 +587,16 @@
   <widget class="QPushButton" name="getSkeletonButton">
    <property name="geometry">
     <rect>
-     <x>505</x>
-     <y>560</y>
-     <width>90</width>
-     <height>30</height>
+     <x>755</x>
+     <y>840</y>
+     <width>140</width>
+     <height>45</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Get</string>
@@ -477,11 +605,16 @@
   <widget class="QPushButton" name="howToUseItButton">
    <property name="geometry">
     <rect>
-     <x>735</x>
-     <y>240</y>
-     <width>120</width>
-     <height>28</height>
+     <x>1103</x>
+     <y>360</y>
+     <width>180</width>
+     <height>42</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>How to use it</string>
@@ -490,21 +623,26 @@
   <widget class="QComboBox" name="labelComboBox">
    <property name="geometry">
     <rect>
-     <x>735</x>
-     <y>430</y>
-     <width>120</width>
-     <height>28</height>
+     <x>1103</x>
+     <y>645</y>
+     <width>180</width>
+     <height>42</height>
     </rect>
    </property>
   </widget>
   <widget class="QLabel" name="labelLabel">
    <property name="geometry">
     <rect>
-     <x>765</x>
-     <y>400</y>
-     <width>60</width>
-     <height>15</height>
+     <x>1103</x>
+     <y>600</y>
+     <width>180</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Label</string>
