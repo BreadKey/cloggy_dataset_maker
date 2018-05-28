@@ -4,7 +4,9 @@
     <list default="true" id="0aecfa7f-d407-40fa-88d5-5cc42e02da12" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/MakerUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/MakerUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloggy_dataset_maker.py" beforeDir="false" afterPath="$PROJECT_DIR$/cloggy_dataset_maker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/images/Thumbs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maker_ui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/maker_ui.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/exiting/Thumbs.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +20,8 @@
       <file leaf-file-name="cloggy_dataset_maker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cloggy_dataset_maker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="114" column="61" selection-start-line="114" selection-start-column="61" selection-end-line="114" selection-end-column="61" />
+            <state relative-caret-position="242">
+              <caret line="272" column="46" selection-start-line="272" selection-start-column="46" selection-end-line="272" selection-end-column="46" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -27,11 +29,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="_pydev_execfile.py" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MakerUI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MakerUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+            <state relative-caret-position="-1867">
+              <caret line="117" column="19" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -47,18 +58,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mask =</find>
-      <find>self.mask</find>
-      <find>grabcut</find>
-      <find>cv2.cir</find>
-      <find>value</find>
-      <find>self.markFore</find>
-      <find>img2</find>
-      <find>delete</find>
-      <find>mask,</find>
-      <find>mask = np</find>
-      <find>cv.cir</find>
-      <find>mask =</find>
       <find>mask = np.</find>
       <find>maskFor</find>
       <find>self.maskForGr</find>
@@ -77,10 +76,24 @@
       <find>isfi</find>
       <find>align</find>
       <find>setImageTo</find>
+      <find>setText</find>
+      <find>rectXValueLabel</find>
+      <find>connect</find>
+      <find>QPoint(</find>
+      <find>rectForGrab</find>
+      <find>rawRect</find>
+      <find>rectValue</find>
+      <find>drawRect</find>
+      <find>startD</find>
+      <find>endDraw</find>
+      <find>self.sil</find>
+      <find>ou</find>
     </findStrings>
     <replaceStrings>
       <replace>startDrawRect</replace>
       <replace>QtGui.QImage</replace>
+      <replace>rectHeightLineEdit</replace>
+      <replace>Line</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -97,9 +110,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="23" />
-    <option name="width" value="1814" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="216" />
+    <option name="width" value="1592" />
     <option name="height" value="1033" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -230,19 +243,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="19" y="0" width="1451" height="826" extended-state="1" />
+    <frame x="173" y="0" width="1273" height="826" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2503536" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28640777" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32946298" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3280116" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3280116" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.35319766" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.35268506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.38088444" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38026124" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3224432" />
@@ -337,17 +350,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MakerUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+        <state relative-caret-position="-1867">
+          <caret line="117" column="19" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cloggy_dataset_maker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="114" column="61" selection-start-line="114" selection-start-column="61" selection-end-line="114" selection-end-column="61" />
+        <state relative-caret-position="242">
+          <caret line="272" column="46" selection-start-line="272" selection-start-column="46" selection-end-line="272" selection-end-column="46" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

@@ -67,10 +67,10 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.isShiftKeyPressed = False
         self.isMarking = False
         self.silhouette = None
-        self.rectXValueLabel.setText("0")
-        self.rectYValueLabel.setText("0")
-        self.rectWidthValueLabel.setText("0")
-        self.rectHeightValueLabel.setText("0")
+        self.rectXLineEdit.setText("0")
+        self.rectYLineEdit.setText("0")
+        self.rectWidthLineEdit.setText("0")
+        self.rectHeightLineEdit.setText("0")
         self.rectForGrabcut = (0, 0, 0, 0)
 
     def addDirectoryList(self):
@@ -108,7 +108,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
             filename = os.path.split(path)[1]
             fileformat = str.split(filename, '.')[1]
 
-            if fileformat == 'png' or fileformat == 'jpg' or fileformat == 'JPG':
+            if fileformat == 'png' or fileformat == 'PNG' or fileformat == 'jpg' or fileformat == 'JPG':
                 image:QtGui.QImage = QtGui.QImage(path)
                 self.setImageToLabel(self.inputImageLabel, image, resizeLabel=True)
                 self.imageSizeLabel.setText("Image size : {} x {}".format(image.width(), image.height()))
@@ -153,8 +153,9 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
 
     def startDrawRect(self, pos:QtCore.QPoint):
         self.isDrawingRect = True
-        self.rectXValueLabel.setText(str(pos.x()))
-        self.rectYValueLabel.setText(str(pos.y()))
+        self.rectXLineEdit.setText(str(pos.x()))
+        self.rectYLineEdit.setText(str(pos.y()))
+        self.rectForGrabcut = (pos.x(), pos.y(), 0, 0)
         self.imageInProcess = cv2.imread(self.imagePath)
         #self.maskForGrabcut = np.zeros(self.imageInProcess.shape[:2], dtype=np.uint8)
 
@@ -166,17 +167,16 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.isDrawingRect = False
         x, y, width, height, self.imageInProcess = self.drawRect(pos, self.imageInProcess)
         self.rectForGrabcut = (x, y, width, height)
-        self.rectXValueLabel.setText(str(x))
-        self.rectYValueLabel.setText(str(y))
-        self.rectWidthValueLabel.setText(str(width))
-        self.rectHeightValueLabel.setText(str(height))
+        self.rectXLineEdit.setText(str(x))
+        self.rectYLineEdit.setText(str(y))
+        self.rectWidthLineEdit.setText(str(width))
+        self.rectHeightLineEdit.setText(str(height))
 
         self.maskForGrabcut = np.zeros(self.imageInProcess.shape[:2], dtype=np.uint8)
         self.grabCutWithRect = True
 
     def drawRect(self, pos:QtCore.QPoint, img):
-        x = int(self.rectXValueLabel.text())
-        y = int(self.rectYValueLabel.text())
+        x, y = self.rectForGrabcut[:2]
 
         if x > pos.x():
             width = x - pos.x()
@@ -268,14 +268,16 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
                 fgdModel = np.zeros((1, 65), np.float64)
                 cv2.grabCut(img, self.maskForGrabcut, self.rectForGrabcut, bgdModel, fgdModel, 1, cv2.GC_INIT_WITH_MASK)
             self.silhouette = np.where((self.maskForGrabcut == 1) + (self.maskForGrabcut == 3), 255, 0).astype('uint8')
-            qimg = self.npArrayToQImage(self.silhouette)
+            output = cv2.bitwise_and(img, img, mask=self.silhouette)
+            #qimg = self.npArrayToQImage(self.silhouette)
+            qimg = self.npArrayToQImage(output)
             self.setImageToLabel(self.silhouetteLabel, qimg)
         self.setCursor(self.inputImageLabelbasicCursor)
 
     def saveSilhouette(self):
         if self.silhouette is not None:
             imageName = self.getImageName(self.imagePath)
-            imageName = imageName.split('.')[0] + '_silhouette.jpg'
+            imageName = imageName.split('.')[0] + '_silhouette.png'
             label = self.labelComboBox.currentText()
 
             savePath = os.path.join(os.getcwd(),'results/silhouettes/' + label)
@@ -285,7 +287,6 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
             except:
                 #directory is already exist
                 pass
-
             cv2.imwrite(os.path.join(savePath, imageName), self.silhouette)
 
     def getImageName(self, path):
