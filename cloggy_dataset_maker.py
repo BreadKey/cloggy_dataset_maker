@@ -20,15 +20,18 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
 
         self.dataSize = (120, 80)
 
-        self.inputImageLabelbasicCursor = QtCore.Qt.ArrowCursor
+        self.inputImageLabelBasicCursor = QtCore.Qt.ArrowCursor
         self.inputImageLabelWaitCursor = QtCore.Qt.WaitCursor
         self.inputImageLabelDrawRectCursor = QtCore.Qt.CrossCursor
+        self.inputImageLabelPointCursor = QtCore.Qt.PointingHandCursor
+        self.inputImageLabelSizeCursor = QtCore.Qt.SizeAllCursor
         self.labels = ['stomachache', 'exiting', 'nervous', 'very_aggressive', 'butt_scooting']
 
         self.initUI()
         self.show()
         self.imageInProcess = None
         self.isShiftKeyPressed = False
+        self.isCtrlKeyPressed = False
         self.isDrawingRect = False
         self.isInputImageExist = False
         self.rectForGrabcut = (0, 0, 0, 0)
@@ -54,7 +57,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.inputImageLabel.mousePressEvent = self.mousePressEventInInputImageLabel
         self.inputImageLabel.mouseReleaseEvent = self.mouseReleaseEventInImageLabel
         self.inputImageLabel.mouseMoveEvent = self.mouseMoveEventInInputImageLabel
-        self.inputImageLabel.setCursor(self.inputImageLabelbasicCursor)
+        self.inputImageLabel.setCursor(self.inputImageLabelBasicCursor)
 
         self.getSilhouetteButton.clicked.connect(self.getSilhouette)
         self.saveSilhouetteButton.clicked.connect(self.saveSilhouette)
@@ -64,11 +67,13 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.keywordComboBox.addItems(self.labels)
 
         self.flipButton.clicked.connect(self.flip)
+
     def initInput(self):
         self.imageInProcess = None
         self.maskForGrabcut = None
         self.isDrawingRect = False
         self.isShiftKeyPressed = False
+        self.isCtrlKeyPressed = False
         self.isMarking = False
         self.silhouette = None
         self.rectXLineEdit.setText("0")
@@ -136,20 +141,28 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
     def mousePressEventInInputImageLabel(self, event:QtGui.QMouseEvent):
         if self.isShiftKeyPressed and not self.isDrawingRect:
             self.startDrawRect(event.pos())
-        elif not self.isShiftKeyPressed and not self.isDrawingRect:
+        elif not self.isShiftKeyPressed and not self.isCtrlKeyPressed and not self.isDrawingRect:
             if self.imageInProcess is not None:
                 if not self.isMarking:
                     self.isMarking = True
 
                     self.changerMarker(event)
                     self.mark(event.pos())
+        elif self.isCtrlKeyPressed and not self.isDrawingRect:
+            self.startDrawRect(event.pos())
+            self.inputImageLabel.setCursor(self.inputImageLabelSizeCursor)
+        elif self.isCtrlKeyPressed and self.isDrawingRect:
+            self.endDrawRect(event.pos())
+
 
     def mouseMoveEventInInputImageLabel(self, event:QtGui.QMouseEvent):
         if self.isShiftKeyPressed and self.isDrawingRect:
             self.drawingRect(event.pos())
-        elif not self.isShiftKeyPressed and self.isMarking:
+        elif not self.isShiftKeyPressed and not self.isCtrlKeyPressed and self.isMarking:
             self.changerMarker(event)
             self.mark(event.pos())
+        elif self.isCtrlKeyPressed and self.isDrawingRect:
+            self.drawingRect(event.pos())
 
     def mouseReleaseEventInImageLabel(self, event:QtGui.QMouseEvent):
         if self.isShiftKeyPressed and self.isDrawingRect:
@@ -163,7 +176,6 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.rectYLineEdit.setText(str(pos.y()))
         self.rectForGrabcut = (pos.x(), pos.y(), 0, 0)
         self.imageInProcess = cv2.imread(self.imagePath)
-        #self.maskForGrabcut = np.zeros(self.imageInProcess.shape[:2], dtype=np.uint8)
 
     def drawingRect(self, pos:QtCore.QPoint):
         imgCopy = self.imageInProcess.copy()
@@ -222,10 +234,14 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
     def keyPressEvent(self, QKeyEvent:QtGui.QKeyEvent):
         if QKeyEvent.key() == 16777248:
             self.shiftKeyPressed()
+        elif QKeyEvent.key() == 16777249:
+            self.ctrlKeyPressed()
 
     def keyReleaseEvent(self, QKeyEvent:QtGui.QKeyEvent):
         if QKeyEvent.key() == 16777248:
             self.shiftKeyReleased()
+        elif QKeyEvent.key() == 16777249:
+            self.ctrlKeyReleased()
             
     def shiftKeyPressed(self):
         if self.isInputImageExist:
@@ -233,11 +249,23 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
             self.isShiftKeyPressed = True
 
     def shiftKeyReleased(self):
-        self.inputImageLabel.setCursor(self.inputImageLabelbasicCursor)
+        self.inputImageLabel.setCursor(self.inputImageLabelBasicCursor)
         self.isShiftKeyPressed = False
         if self.isDrawingRect:
             qimg = self.npArrayToQImage(self.imageInProcess)
             self.setImageToLabel(self.inputImageLabel, qimg)
+            self.initInput()
+
+    def ctrlKeyPressed(self):
+        if self.isInputImageExist and not self.isCtrlKeyPressed:
+            self.inputImageLabel.setCursor(self.inputImageLabelPointCursor)
+            self.isCtrlKeyPressed = True
+
+    def ctrlKeyReleased(self):
+        self.inputImageLabel.setCursor(self.inputImageLabelBasicCursor)
+        self.isCtrlKeyPressed = False
+        if self.isDrawingRect:
+            self.inputImageLabel.setCursor(self.inputImageLabelBasicCursor)
             self.initInput()
 
     def npArrayToQImage(self, img, copy=False):
@@ -279,7 +307,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
             #qimg = self.npArrayToQImage(self.silhouette)
             qimg = self.npArrayToQImage(output)
             self.setImageToLabel(self.silhouetteLabel, qimg)
-        self.setCursor(self.inputImageLabelbasicCursor)
+        self.setCursor(self.inputImageLabelBasicCursor)
 
     def saveSilhouette(self):
         if self.silhouette is not None:
@@ -312,7 +340,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
 
     def howToUseIt(self):
         QMessageBox.about(self, "How to use it", "1. Select the cloggy image you want to get a data."
-                                                 "\n\n2. Holding down the Shift key, click and drag to draw the rectangle containing the cloggy."
+                                                 "\n\n2. Holding down the Shift key, click and drag to draw a rectangle containing the cloggy. Or draw a rectangle by left-click and left-click holding down control key. "
                                                  "\n\n3. To get a silhouette, press the Get button under the silhouette box. (The rectangle must exist before getting a silhouette.)"
                                                  "\n\n4. If you want to get a more accurate silhouette, mark the foreground of the object with mouse left click and mark the background of the object with mouse right click."
                                                  "\n\n5. To get a skeleton, press the Get button under the silhouette box. (The Silhouette must exist before getting a skeleton.)"
