@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0aecfa7f-d407-40fa-88d5-5cc42e02da12" name="Default" comment="" />
+    <list default="true" id="0aecfa7f-d407-40fa-88d5-5cc42e02da12" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/cloggy_dataset_maker.py" beforeDir="false" afterPath="$PROJECT_DIR$/cloggy_dataset_maker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/KakaoTalk_20180322_191627133.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/KakaoTalk_20180322_191627133.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/KakaoTalk_20180322_191708614.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/KakaoTalk_20180322_191708614.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/KakaoTalk_20180527_170715438.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/KakaoTalk_20180527_170715438.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/KakaoTalk_20180528_163546206.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/KakaoTalk_20180528_163546502.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/KakaoTalk_20180528_163546502.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Small_dog_stretching_KWL08-367.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/Small_dog_stretching_KWL08-367.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/images/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Vorderkoerpertiefstellung_THWZ (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/Vorderkoerpertiefstellung_THWZ (1).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dog-stretching-down.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dog-stretching-down.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/download (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/download (1).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/download.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/download.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/downward dog 1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/downward dog 1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dsgasdgahfah.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dsgasdgahfah.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/fsdgasdga.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/fsdgasdga.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/gdagsdg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/gdagsdg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/i (2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/i (2).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/images-7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/images-7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/images.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/images.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/stock-photo-dog-stretch-oneself-on-ground-1008128032.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/susisketch_by_lhuin-d92h9hw.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/susisketch_by_lhuin-d92h9hw.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/butt_scooting/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/butt_scooting/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/exiting/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/stomachache/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/stomachache/Thumbs.db" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +39,8 @@
       <file leaf-file-name="cloggy_dataset_maker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cloggy_dataset_maker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="283" column="29" lean-forward="true" selection-start-line="283" selection-start-column="29" selection-end-line="283" selection-end-column="29" />
+            <state relative-caret-position="128">
+              <caret line="181" column="20" selection-start-line="181" selection-start-column="13" selection-end-line="181" selection-end-column="20" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -61,15 +86,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getS</find>
-      <find>mark foreground region</find>
-      <find>print</find>
-      <find>Cur</find>
-      <find>isfile</find>
-      <find>self.set</find>
-      <find>isfi</find>
-      <find>align</find>
-      <find>setImageTo</find>
       <find>setText</find>
       <find>rectXValueLabel</find>
       <find>connect</find>
@@ -79,7 +95,6 @@
       <find>rectValue</find>
       <find>drawRect</find>
       <find>startD</find>
-      <find>endDraw</find>
       <find>self.sil</find>
       <find>inputImageLoad</find>
       <find>init</find>
@@ -91,6 +106,16 @@
       <find>resize</find>
       <find>resi</find>
       <find>resizeImage</find>
+      <find>ctrlKey</find>
+      <find>ctrlKeyPre</find>
+      <find>ctrlKeyPressed</find>
+      <find>ctrl</find>
+      <find>mouse</find>
+      <find>initInput</find>
+      <find>ctrlKeyP</find>
+      <find>isInputImageExist</find>
+      <find>isCtrl</find>
+      <find>endDraw</find>
     </findStrings>
     <replaceStrings>
       <replace>startDrawRect</replace>
@@ -115,8 +140,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="216" />
-    <option name="width" value="1590" />
+    <option name="x" value="-73" />
+    <option name="y" value="67" />
+    <option name="width" value="1933" />
     <option name="height" value="1033" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -247,10 +273,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="173" y="0" width="1272" height="826" extended-state="0" />
+    <frame x="-58" y="54" width="1546" height="826" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2866397" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23459245" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3280116" />
@@ -367,8 +393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cloggy_dataset_maker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="283" column="29" lean-forward="true" selection-start-line="283" selection-start-column="29" selection-end-line="283" selection-end-column="29" />
+        <state relative-caret-position="128">
+          <caret line="181" column="20" selection-start-line="181" selection-start-column="13" selection-end-line="181" selection-end-column="20" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
