@@ -4,9 +4,21 @@
     <list default="true" id="0aecfa7f-d407-40fa-88d5-5cc42e02da12" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/MakerUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/MakerUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloggy_dataset_maker.py" beforeDir="false" afterPath="$PROJECT_DIR$/cloggy_dataset_maker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/lena.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/imageProcessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/24e69e6ef07e40655e24e615bbf83f8c.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/24e69e6ef07e40655e24e615bbf83f8c.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/2624162607_13cc4bb141_b.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/2624162607_13cc4bb141_b.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/images/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/agdsgagdag.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/agdsgagdag.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dagdsga.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dagdsga.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dog_scooting1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dog_scooting1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dog_scooting2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dog_scooting2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maker_ui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/maker_ui.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/exiting/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/stock-photo-dog-stretch-oneself-on-ground-1008128032_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/stomachache/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/stomachache/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/stomachache/a1d587ca3a4210dba15b4a7a86eac7b8_silhouette.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/stomachache/a1d587ca3a4210dba15b4a7a86eac7b8_silhouette.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/stomachache/adgasdga_silhouette.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/stomachache/adgasdga_silhouette.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +32,20 @@
       <file leaf-file-name="cloggy_dataset_maker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cloggy_dataset_maker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="272" column="46" selection-start-line="272" selection-start-column="46" selection-end-line="272" selection-end-column="46" />
+            <state relative-caret-position="185">
+              <caret line="283" column="29" lean-forward="true" selection-start-line="283" selection-start-column="29" selection-end-line="283" selection-end-column="29" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imageProcessor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imageProcessor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -41,8 +62,8 @@
       <file leaf-file-name="MakerUI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MakerUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1867">
-              <caret line="117" column="19" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="19" />
+            <state relative-caret-position="128">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -58,15 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mask = np.</find>
-      <find>maskFor</find>
-      <find>self.maskForGr</find>
-      <find>cv2.im</find>
-      <find>ip.de</find>
-      <find>self.maskFor</find>
-      <find>mask</find>
-      <find>sil</find>
-      <find>endD</find>
       <find>getS</find>
       <find>mark foreground region</find>
       <find>print</find>
@@ -87,13 +99,23 @@
       <find>startD</find>
       <find>endDraw</find>
       <find>self.sil</find>
+      <find>inputImageLoad</find>
+      <find>init</find>
+      <find>getSil</find>
       <find>ou</find>
+      <find>self.resi</find>
+      <find>self.dataS</find>
+      <find>saveS</find>
+      <find>resize</find>
+      <find>resi</find>
+      <find>resizeImage</find>
     </findStrings>
     <replaceStrings>
       <replace>startDrawRect</replace>
       <replace>QtGui.QImage</replace>
       <replace>rectHeightLineEdit</replace>
       <replace>Line</replace>
+      <replace>keywordComboBox</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -110,9 +132,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="216" />
-    <option name="width" value="1592" />
+    <option name="width" value="1590" />
     <option name="height" value="1033" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -243,15 +265,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="173" y="0" width="1273" height="826" extended-state="1" />
+    <frame x="173" y="0" width="1272" height="826" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28640777" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2866397" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3280116" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3280116" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32946298" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.35268506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -333,20 +355,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imageProcessor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="19" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/cloggy/Lib/ntpath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MakerUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -357,17 +376,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MakerUI.py">
+    <entry file="file://$PROJECT_DIR$/imageProcessor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1867">
-          <caret line="117" column="19" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="19" />
+        <state relative-caret-position="128">
+          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cloggy_dataset_maker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="272" column="46" selection-start-line="272" selection-start-column="46" selection-end-line="272" selection-end-column="46" />
+        <state relative-caret-position="185">
+          <caret line="283" column="29" lean-forward="true" selection-start-line="283" selection-start-column="29" selection-end-line="283" selection-end-column="29" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

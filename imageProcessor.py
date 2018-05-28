@@ -34,3 +34,35 @@ def drawRectangle(img, rect: tuple, color: tuple = (0, 255, 0), size: int = 7):
     endXY = (rect[0] + rect[2], rect[1] + rect[3])
 
     return cv2.rectangle(newImg, startXY, endXY, color, size)
+
+def resizeImage(img, wanted_size, rect=None , maintain_ratio=False):
+    if rect is None:
+        x, y, width, height = (0, 0, img.shape[1], img.shape[0])
+    else:
+        x, y, width, height = rect
+    data_width, data_height = wanted_size
+    img = img[y:y + height, x:x + width]
+    shape = list(img.shape)
+    shape[0] = data_height
+    shape[1] = data_width
+    shape = tuple(shape)
+    result = np.zeros(shape, dtype=img.dtype)
+
+    if maintain_ratio:
+        height_ratio = data_height / height
+        resized_width = round(width * height_ratio)
+        if resized_width < data_width:
+            resized_img_size = (resized_width, data_height)
+            img = cv2.resize(img, resized_img_size, 0, 0, cv2.INTER_LINEAR)
+            width_space = round((data_width - resized_width) / 2)
+            result[:data_height, width_space:width_space + resized_width] = img[:data_height, :resized_width]
+        else:
+            width_ratio = data_width / width
+            resized_height = round(height * width_ratio)
+            resized_img_size = (data_width, resized_height)
+            img = cv2.resize(img, resized_img_size, 0, 0, cv2.INTER_LINEAR)
+            height_space = round((data_height - resized_height) / 2)
+            result[height_space:height_space + resized_height, :data_width] = img[:data_height, :data_width]
+    else:
+        result = cv2.resize(img, wanted_size, 0, 0, cv2.INTER_LINEAR)
+    return result

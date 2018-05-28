@@ -512,7 +512,7 @@
     <string>How to use it</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="labelComboBox">
+  <widget class="QComboBox" name="keywordComboBox">
    <property name="geometry">
     <rect>
      <x>1103</x>
@@ -522,7 +522,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="labelLabel">
+  <widget class="QLabel" name="keywordLabel">
    <property name="geometry">
     <rect>
      <x>1103</x>
@@ -537,7 +537,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Label</string>
+    <string>Keyword</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -628,6 +628,24 @@
    </property>
    <property name="readOnly">
     <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="flipButton">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>412</y>
+     <width>180</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Flip</string>
    </property>
   </widget>
  </widget>

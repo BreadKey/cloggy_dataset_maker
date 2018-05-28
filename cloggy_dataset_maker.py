@@ -8,6 +8,7 @@ from MakerUI import Ui_Maker_Dialog
 import cv2
 import numpy as np
 import imageProcessor as ip
+import matplotlib.pyplot as plt
 
 class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
     def __init__(self):
@@ -16,6 +17,8 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.currentPath = os.getcwd()
         self.contentPath = None
         self.imagePath = None
+
+        self.dataSize = (120, 80)
 
         self.inputImageLabelbasicCursor = QtCore.Qt.ArrowCursor
         self.inputImageLabelWaitCursor = QtCore.Qt.WaitCursor
@@ -58,8 +61,9 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
 
         self.howToUseItButton.clicked.connect(self.howToUseIt)
 
-        self.labelComboBox.addItems(self.labels)
+        self.keywordComboBox.addItems(self.labels)
 
+        self.flipButton.clicked.connect(self.flip)
     def initInput(self):
         self.imageInProcess = None
         self.maskForGrabcut = None
@@ -109,13 +113,16 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
             fileformat = str.split(filename, '.')[1]
 
             if fileformat == 'png' or fileformat == 'PNG' or fileformat == 'jpg' or fileformat == 'JPG':
-                image:QtGui.QImage = QtGui.QImage(path)
-                self.setImageToLabel(self.inputImageLabel, image, resizeLabel=True)
-                self.imageSizeLabel.setText("Image size : {} x {}".format(image.width(), image.height()))
-                self.inputImageScrollArea.resize(image.size())
-                self.isInputImageExist = True
-                self.imagePath = path
-                self.initInput()
+                self.inputImageLoad(path)
+
+    def inputImageLoad(self, img_path):
+        image: QtGui.QImage = QtGui.QImage(img_path)
+        self.setImageToLabel(self.inputImageLabel, image, resizeLabel=True)
+        self.imageSizeLabel.setText("Image size : {} x {}".format(image.width(), image.height()))
+        self.inputImageScrollArea.resize(image.size())
+        self.isInputImageExist = True
+        self.imagePath = img_path
+        self.initInput()
 
     def setImageToLabel(self, label:QLabel, image:QtGui.QImage, resizeLabel=False):
         pixmab:QtGui.QPixmap = QtGui.QPixmap.fromImage(image)
@@ -143,7 +150,6 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         elif not self.isShiftKeyPressed and self.isMarking:
             self.changerMarker(event)
             self.mark(event.pos())
-
 
     def mouseReleaseEventInImageLabel(self, event:QtGui.QMouseEvent):
         if self.isShiftKeyPressed and self.isDrawingRect:
@@ -269,6 +275,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
                 cv2.grabCut(img, self.maskForGrabcut, self.rectForGrabcut, bgdModel, fgdModel, 1, cv2.GC_INIT_WITH_MASK)
             self.silhouette = np.where((self.maskForGrabcut == 1) + (self.maskForGrabcut == 3), 255, 0).astype('uint8')
             output = cv2.bitwise_and(img, img, mask=self.silhouette)
+            output = ip.resizeImage(output, self.dataSize, self.rectForGrabcut, True)
             #qimg = self.npArrayToQImage(self.silhouette)
             qimg = self.npArrayToQImage(output)
             self.setImageToLabel(self.silhouetteLabel, qimg)
@@ -278,7 +285,9 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         if self.silhouette is not None:
             imageName = self.getImageName(self.imagePath)
             imageName = imageName.split('.')[0] + '_silhouette.png'
-            label = self.labelComboBox.currentText()
+            label = self.keywordComboBox.currentText()
+
+            self.silhouette = ip.resizeImage(self.silhouette, self.dataSize, self.rectForGrabcut, True)
 
             savePath = os.path.join(os.getcwd(),'results/silhouettes/' + label)
 
@@ -293,6 +302,14 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         if path is not None:
             return os.path.split(path)[1]
 
+    def flip(self):
+        if self.isInputImageExist:
+            img_path = self.imagePath
+            img = cv2.imread(img_path)
+            img = cv2.flip(img, 1)
+            cv2.imwrite(img_path, img)
+            self.inputImageLoad(img_path)
+
     def howToUseIt(self):
         QMessageBox.about(self, "How to use it", "1. Select the cloggy image you want to get a data."
                                                  "\n\n2. Holding down the Shift key, click and drag to draw the rectangle containing the cloggy."
@@ -301,6 +318,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
                                                  "\n\n5. To get a skeleton, press the Get button under the silhouette box. (The Silhouette must exist before getting a skeleton.)"
                                                  "\n\n6. Select label to cloggy image"
                                                  "\n\n7. Press the save buttons to save the results.")
+
 
 app = QApplication(sys.argv)
 xwin = cloggy_dataset_maker()
