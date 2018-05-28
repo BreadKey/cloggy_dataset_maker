@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0aecfa7f-d407-40fa-88d5-5cc42e02da12" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/MakerUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/MakerUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloggy_dataset_maker.py" beforeDir="false" afterPath="$PROJECT_DIR$/cloggy_dataset_maker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lena.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imageProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/imageProcessor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/24e69e6ef07e40655e24e615bbf83f8c.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/24e69e6ef07e40655e24e615bbf83f8c.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2624162607_13cc4bb141_b.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/2624162607_13cc4bb141_b.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/images/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/agdsgagdag.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/agdsgagdag.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dagdsga.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dagdsga.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dog_scooting1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dog_scooting1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dog_scooting2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dog_scooting2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maker_ui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/maker_ui.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/exiting/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/stock-photo-dog-stretch-oneself-on-ground-1008128032_silhouette.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/stomachache/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/stomachache/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/stomachache/a1d587ca3a4210dba15b4a7a86eac7b8_silhouette.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/stomachache/a1d587ca3a4210dba15b4a7a86eac7b8_silhouette.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/stomachache/adgasdga_silhouette.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/stomachache/adgasdga_silhouette.png" afterDir="false" />
-    </list>
+    <list default="true" id="0aecfa7f-d407-40fa-88d5-5cc42e02da12" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
