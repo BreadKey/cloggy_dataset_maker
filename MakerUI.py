@@ -230,6 +230,23 @@ class Ui_Maker_Dialog(object):
         font.setPointSize(14)
         self.flipButton.setFont(font)
         self.flipButton.setObjectName("flipButton")
+        self.markerSizeSlider = QtWidgets.QSlider(Maker_Dialog)
+        self.markerSizeSlider.setGeometry(QtCore.QRect(1100, 500, 180, 22))
+        self.markerSizeSlider.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.markerSizeSlider.setMinimum(1)
+        self.markerSizeSlider.setMaximum(5)
+        self.markerSizeSlider.setSliderPosition(3)
+        self.markerSizeSlider.setOrientation(QtCore.Qt.Horizontal)
+        self.markerSizeSlider.setTickPosition(QtWidgets.QSlider.TicksAbove)
+        self.markerSizeSlider.setTickInterval(1)
+        self.markerSizeSlider.setObjectName("markerSizeSlider")
+        self.markerSizeLabel = QtWidgets.QLabel(Maker_Dialog)
+        self.markerSizeLabel.setGeometry(QtCore.QRect(1100, 470, 180, 23))
+        self.markerSizeLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.markerSizeLabel.setObjectName("markerSizeLabel")
+        self.label = QtWidgets.QLabel(Maker_Dialog)
+        self.label.setGeometry(QtCore.QRect(1100, 530, 180, 15))
+        self.label.setObjectName("label")
 
         self.retranslateUi(Maker_Dialog)
         QtCore.QMetaObject.connectSlotsByName(Maker_Dialog)
@@ -263,6 +280,8 @@ class Ui_Maker_Dialog(object):
         self.rectWidthLineEdit.setText(_translate("Maker_Dialog", "0"))
         self.rectHeightLineEdit.setText(_translate("Maker_Dialog", "0"))
         self.flipButton.setText(_translate("Maker_Dialog", "Flip"))
+        self.markerSizeLabel.setText(_translate("Maker_Dialog", "Marker size"))
+        self.label.setText(_translate("Maker_Dialog", "1       2       3      4       5"))
 
 
 if __name__ == "__main__":

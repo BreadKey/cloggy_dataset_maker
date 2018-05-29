@@ -25,7 +25,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.inputImageLabelDrawRectCursor = QtCore.Qt.CrossCursor
         self.inputImageLabelPointCursor = QtCore.Qt.PointingHandCursor
         self.inputImageLabelSizeCursor = QtCore.Qt.SizeAllCursor
-        self.labels = ['stomachache', 'exiting', 'nervous', 'very_aggressive', 'butt_scooting']
+        self.labels = ['stomachache', 'exciting', 'stressed', 'very_aggressive', 'butt_scooting']
 
         self.initUI()
         self.show()
@@ -45,7 +45,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.isMarking = False
 
         self.silhouette = None
-
+        self.skeleton = None
 
     def initUI(self):
         self.addDirectoryList()
@@ -67,6 +67,10 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.keywordComboBox.addItems(self.labels)
 
         self.flipButton.clicked.connect(self.flip)
+        
+        self.markerSizeSlider.valueChanged.connect(self.changeMarkerSize)
+
+        self.getSkeletonButton.clicked.connect(self.getSkeleton)
 
     def initInput(self):
         self.imageInProcess = None
@@ -76,6 +80,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.isCtrlKeyPressed = False
         self.isMarking = False
         self.silhouette = None
+        self.skeleton = None
         self.rectXLineEdit.setText("0")
         self.rectYLineEdit.setText("0")
         self.rectWidthLineEdit.setText("0")
@@ -153,7 +158,6 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
             self.inputImageLabel.setCursor(self.inputImageLabelSizeCursor)
         elif self.isCtrlKeyPressed and self.isDrawingRect:
             self.endDrawRect(event.pos())
-
 
     def mouseMoveEventInInputImageLabel(self, event:QtGui.QMouseEvent):
         if self.isShiftKeyPressed and self.isDrawingRect:
@@ -265,7 +269,8 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.inputImageLabel.setCursor(self.inputImageLabelBasicCursor)
         self.isCtrlKeyPressed = False
         if self.isDrawingRect:
-            self.inputImageLabel.setCursor(self.inputImageLabelBasicCursor)
+            qimg = self.npArrayToQImage(self.imageInProcess)
+            self.setImageToLabel(self.inputImageLabel, qimg)
             self.initInput()
 
     def npArrayToQImage(self, img, copy=False):
@@ -315,8 +320,6 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
             imageName = imageName.split('.')[0] + '_silhouette.png'
             label = self.keywordComboBox.currentText()
 
-            self.silhouette = ip.resizeImage(self.silhouette, self.dataSize, self.rectForGrabcut, True)
-
             savePath = os.path.join(os.getcwd(),'results/silhouettes/' + label)
 
             try:
@@ -324,7 +327,18 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
             except:
                 #directory is already exist
                 pass
+
+            self.silhouette = ip.resizeImage(self.silhouette, self.dataSize, self.rectForGrabcut, True)
             cv2.imwrite(os.path.join(savePath, imageName), self.silhouette)
+
+    def getSkeleton(self):
+        if self.silhouette is not None:
+            silhouette = self.silhouette
+            if silhouette.shape[:2] != self.dataSize[1:-1]:
+                silhouette = ip.resizeImage(silhouette, self.dataSize, self.rectForGrabcut, True)
+            self.skeleton = ip.skeletonizer(silhouette)
+            qimg = self.npArrayToQImage(self.skeleton * 255)
+            self.setImageToLabel(self.skeletonLabel, qimg)
 
     def getImageName(self, path):
         if path is not None:
@@ -337,6 +351,9 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
             img = cv2.flip(img, 1)
             cv2.imwrite(img_path, img)
             self.inputImageLoad(img_path)
+
+    def changeMarkerSize(self, value):
+        self.markerSize = value
 
     def howToUseIt(self):
         QMessageBox.about(self, "How to use it", "1. Select the cloggy image you want to get a data."

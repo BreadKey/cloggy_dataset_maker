@@ -2,30 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0aecfa7f-d407-40fa-88d5-5cc42e02da12" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/MakerUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/MakerUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloggy_dataset_maker.py" beforeDir="false" afterPath="$PROJECT_DIR$/cloggy_dataset_maker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/KakaoTalk_20180322_191627133.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/KakaoTalk_20180322_191627133.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/KakaoTalk_20180322_191708614.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/KakaoTalk_20180322_191708614.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/KakaoTalk_20180527_170715438.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/KakaoTalk_20180527_170715438.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/KakaoTalk_20180528_163546206.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/KakaoTalk_20180528_163546502.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/KakaoTalk_20180528_163546502.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Small_dog_stretching_KWL08-367.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/Small_dog_stretching_KWL08-367.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/imageProcessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/00478315.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/00478315.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/images/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Vorderkoerpertiefstellung_THWZ (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/Vorderkoerpertiefstellung_THWZ (1).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dog-stretching-down.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dog-stretching-down.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/download (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/download (1).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/download.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/download.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/downward dog 1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/downward dog 1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dsgasdgahfah.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dsgasdgahfah.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/fsdgasdga.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/fsdgasdga.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/gdagsdg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/gdagsdg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/i (2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/i (2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images-7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/images-7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/images.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/stock-photo-dog-stretch-oneself-on-ground-1008128032.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/susisketch_by_lhuin-d92h9hw.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/susisketch_by_lhuin-d92h9hw.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/a1d587ca3a4210dba15b4a7a86eac7b8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/a1d587ca3a4210dba15b4a7a86eac7b8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maker_ui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/maker_ui.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/silhouettes/butt_scooting/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/butt_scooting/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/exiting/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/24e69e6ef07e40655e24e615bbf83f8c_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/32487303-a-happy-and-friendly-dog-stretching-out-into-a-bowing-or-downdog-position_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/Small_dog_stretching_KWL08-367_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/Vorderkoerpertiefstellung_THWZ (1)_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/_stock-photo-dog-stretch-oneself-on-ground-1008128032_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/agdsgagdag_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/asdgasdgasd_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/b0c8e62cc82eef28af523d2a57b66303_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/dagdsga_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/dagsdga_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/dalmatian-dog-young-beautiful-stretching-yawning-grass-distinctive-its-white-black-spots-its-coat-45412847_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/dasdgadsg_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/dfa_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/dfadsf_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/dfasga_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/dfsaf_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/dkf_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/dog-stretching-down_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/downward dog 1_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/dsagasdg_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/dsc_0588_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/dsgasdgahfah_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/fsdgasdga_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/gbdvzcx_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/gdagsdg_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/i (2)_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/images_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/inner-page-getup_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/large-dog-bowing-smiling-happy-friendly-stretching-out-downdog-position-45397939_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/play-dog_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/up-running_silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exiting/zxcz_silhouette.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/results/silhouettes/stomachache/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/stomachache/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/very_aggressive/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/very_aggressive/Thumbs.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,8 +58,8 @@
       <file leaf-file-name="cloggy_dataset_maker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cloggy_dataset_maker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="181" column="20" selection-start-line="181" selection-start-column="13" selection-end-line="181" selection-end-column="20" />
+            <state relative-caret-position="134">
+              <caret line="336" column="59" lean-forward="true" selection-start-line="336" selection-start-column="59" selection-end-line="336" selection-end-column="59" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -51,8 +70,11 @@
       <file leaf-file-name="imageProcessor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imageProcessor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+            <state relative-caret-position="858">
+              <caret line="75" column="19" lean-forward="true" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,19 +108,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>setText</find>
-      <find>rectXValueLabel</find>
-      <find>connect</find>
-      <find>QPoint(</find>
-      <find>rectForGrab</find>
-      <find>rawRect</find>
-      <find>rectValue</find>
-      <find>drawRect</find>
       <find>startD</find>
       <find>self.sil</find>
       <find>inputImageLoad</find>
       <find>init</find>
-      <find>getSil</find>
       <find>ou</find>
       <find>self.resi</find>
       <find>self.dataS</find>
@@ -116,12 +129,22 @@
       <find>isInputImageExist</find>
       <find>isCtrl</find>
       <find>endDraw</find>
+      <find>ctrlKeyRe</find>
+      <find>setCursor</find>
+      <find>changeMa</find>
+      <find>exiting</find>
+      <find>qimg =</find>
+      <find>getSilh</find>
+      <find>getSil</find>
+      <find>save</find>
+      <find>saveSil</find>
     </findStrings>
     <replaceStrings>
       <replace>startDrawRect</replace>
       <replace>QtGui.QImage</replace>
       <replace>rectHeightLineEdit</replace>
       <replace>Line</replace>
+      <replace>changeMarkerSize</replace>
       <replace>keywordComboBox</replace>
     </replaceStrings>
   </component>
@@ -139,11 +162,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-73" />
-    <option name="y" value="67" />
-    <option name="width" value="1933" />
-    <option name="height" value="1033" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="32" />
+    <option name="y" value="38" />
+    <option name="width" value="1479" />
+    <option name="height" value="988" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -273,19 +296,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-58" y="54" width="1546" height="826" extended-state="0" />
+    <frame x="26" y="31" width="1183" height="790" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23459245" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30890054" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3280116" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3280116" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32751092" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43797857" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32946298" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.35268506" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.27718222" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.38026124" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3797856" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3224432" />
@@ -311,7 +334,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -386,15 +409,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imageProcessor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        <state relative-caret-position="858">
+          <caret line="75" column="19" lean-forward="true" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cloggy_dataset_maker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="181" column="20" selection-start-line="181" selection-start-column="13" selection-end-line="181" selection-end-column="20" />
+        <state relative-caret-position="134">
+          <caret line="336" column="59" lean-forward="true" selection-start-line="336" selection-start-column="59" selection-end-line="336" selection-end-column="59" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

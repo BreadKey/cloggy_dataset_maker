@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
+from skimage.morphology import skeletonize
 
 _medianFilterKernalSize = 3
 _medianFilterCount = 30
@@ -66,3 +67,10 @@ def resizeImage(img, wanted_size, rect=None , maintain_ratio=False):
     else:
         result = cv2.resize(img, wanted_size, 0, 0, cv2.INTER_LINEAR)
     return result
+
+def skeletonizer(img):
+    skeleton = img
+    skeleton.dtype = np.bool
+    skeleton = skeletonize(img)
+    skeleton.dtype = np.uint8
+    return skeleton
