@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0aecfa7f-d407-40fa-88d5-5cc42e02da12" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/butt_scooting/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/butt_scooting/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/stomachache/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/stomachache/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/very_aggressive/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/very_aggressive/Thumbs.db" afterDir="false" />
-    </list>
+    <list default="true" id="0aecfa7f-d407-40fa-88d5-5cc42e02da12" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +119,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="377" />
+    <option name="x" value="155" />
     <option name="y" value="27" />
     <option name="width" value="1479" />
     <option name="height" value="988" />
@@ -257,7 +253,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="302" y="22" width="1183" height="790" extended-state="0" />
+    <frame x="124" y="22" width="1183" height="790" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30890054" />
