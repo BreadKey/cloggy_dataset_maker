@@ -17,7 +17,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.contentPath = None
         self.imagePath = None
 
-        self.dataSize = (120, 80)
+        self.dataSize = (120, 120)
 
         self.inputImageLabelBasicCursor = QtCore.Qt.ArrowCursor
         self.inputImageLabelWaitCursor = QtCore.Qt.WaitCursor
@@ -70,6 +70,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
         self.markerSizeSlider.valueChanged.connect(self.changeMarkerSize)
 
         self.getSkeletonButton.clicked.connect(self.getSkeleton)
+        self.saveSkeletonButton.clicked.connect(self.saveSkeleton)
 
     def initInput(self):
         self.imageInProcess = None
@@ -316,7 +317,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
     def saveSilhouette(self):
         if self.silhouette is not None:
             imageName = self.getImageName(self.imagePath)
-            imageName = imageName.split('.')[0] + '_silhouette.png'
+            imageName = imageName.split('.')[0] + '.png'
             label = self.keywordComboBox.currentText()
 
             savePath = os.path.join(os.getcwd(),'results/silhouettes/' + label)
@@ -338,6 +339,22 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
             self.skeleton = ip.skeletonizer(silhouette)
             qimg = self.npArrayToQImage(self.skeleton * 255)
             self.setImageToLabel(self.skeletonLabel, qimg)
+
+    def saveSkeleton(self):
+        if self.skeleton is not None:
+            imageName = self.getImageName(self.imagePath)
+            imageName = imageName.split('.')[0] + '_skeleton.png'
+            label = self.keywordComboBox.currentText()
+
+            savePath = os.path.join(os.getcwd(),'results/skeletons/' + label)
+
+            try:
+                os.mkdir(savePath)
+            except:
+                #directory is already exist
+                pass
+
+            cv2.imwrite(os.path.join(savePath, imageName), self.skeleton, 0)
 
     def getImageName(self, path):
         if path is not None:
