@@ -377,7 +377,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
                                                  "\n\n3. To get a silhouette, press the Get button under the silhouette box. (The rectangle must exist before getting a silhouette.)"
                                                  "\n\n4. If you want to get a more accurate silhouette, mark the foreground of the object with mouse left click and mark the background of the object with mouse right click."
                                                  "\n\n5. To get a skeleton, press the Get button under the silhouette box. (The Silhouette must exist before getting a skeleton.)"
-                                                 "\n\n6. Select label to cloggy image"
+                                                 "\n\n6. Select a keyword to cloggy image"
                                                  "\n\n7. Press the save buttons to save the results.")
 
 
