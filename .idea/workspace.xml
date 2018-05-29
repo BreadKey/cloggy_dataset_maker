@@ -3,19 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0aecfa7f-d407-40fa-88d5-5cc42e02da12" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MakerUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/MakerUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloggy_dataset_maker.py" beforeDir="false" afterPath="$PROJECT_DIR$/cloggy_dataset_maker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/images/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/asdgasdgasd.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/asdgasdgasd.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maker_ui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/maker_ui.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/silhouettes/butt_scooting/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/butt_scooting/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/butt_scooting/dog_scooting1_silhouette.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/butt_scooting/dog_scooting1_silhouette.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/butt_scooting/dog_scooting2_silhouette.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/butt_scooting/dog_scooting2_silhouette.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/butt_scooting/dog_scooting3_silhouette.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/butt_scooting/dog_scooting3_silhouette.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/exciting/24e69e6ef07e40655e24e615bbf83f8c_silhouette.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/exciting/24e69e6ef07e40655e24e615bbf83f8c_silhouette.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/exciting/32487303-a-happy-and-friendly-dog-stretching-out-into-a-bowing-or-downdog-position_silhouette.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/exciting/32487303-a-happy-and-friendly-dog-stretching-out-into-a-bowing-or-downdog-position_silhouette.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/silhouettes/exciting/agdsgagdag_silhouette.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/exciting/agdsgagdag_silhouette.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/exciting/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/exciting/Thumbs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/silhouettes/stomachache/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/stomachache/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/stressed/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/stressed/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/silhouettes/very_aggressive/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/silhouettes/very_aggressive/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/skeletons/stomachache/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/results/skeletons/stomachache/Thumbs.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,8 +23,8 @@
       <file leaf-file-name="cloggy_dataset_maker.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cloggy_dataset_maker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="94" column="45" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="45" />
+            <state relative-caret-position="260">
+              <caret line="356" column="72" selection-start-line="356" selection-start-column="72" selection-end-line="356" selection-end-column="72" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -41,8 +35,8 @@
       <file leaf-file-name="data_resizer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data_resizer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+            <state relative-caret-position="117">
+              <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -91,7 +85,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>self.resi</find>
       <find>self.dataS</find>
       <find>saveS</find>
       <find>resize</find>
@@ -113,7 +106,6 @@
       <find>exiting</find>
       <find>qimg =</find>
       <find>getSilh</find>
-      <find>getSil</find>
       <find>save</find>
       <find>saveSil</find>
       <find>matplotli</find>
@@ -121,14 +113,16 @@
       <find>saveSilhou</find>
       <find>'_sil</find>
       <find>dir</find>
+      <find>getSil</find>
+      <find>getSkele</find>
     </findStrings>
     <replaceStrings>
       <replace>startDrawRect</replace>
       <replace>QtGui.QImage</replace>
       <replace>rectHeightLineEdit</replace>
       <replace>Line</replace>
-      <replace>keywordComboBox</replace>
       <replace>changeMarkerSize</replace>
+      <replace>keywordComboBox</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -141,8 +135,8 @@
         <option value="$PROJECT_DIR$/getCov.py" />
         <option value="$PROJECT_DIR$/images/grabcut.py" />
         <option value="$PROJECT_DIR$/imageProcessor.py" />
-        <option value="$PROJECT_DIR$/cloggy_dataset_maker.py" />
         <option value="$PROJECT_DIR$/data_resizer.py" />
+        <option value="$PROJECT_DIR$/cloggy_dataset_maker.py" />
       </list>
     </option>
   </component>
@@ -198,7 +192,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.data_resizer">
+  <component name="RunManager" selected="Python.cloggy_dataset_maker">
     <configuration name="cloggy_dataset_maker" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cloggy_dataset_maker" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -279,8 +273,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.data_resizer" />
         <item itemvalue="Python.cloggy_dataset_maker" />
+        <item itemvalue="Python.data_resizer" />
         <item itemvalue="Python.grabcut" />
         <item itemvalue="Python.getCov" />
       </list>
@@ -301,7 +295,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1183" height="790" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30890054" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -338,7 +331,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/cloggy_dataset_maker.py</url>
+          <line>356</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -404,10 +404,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+    <entry file="file://$PROJECT_DIR$/cloggy_dataset_maker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="260">
+          <caret line="356" column="72" selection-start-line="356" selection-start-column="72" selection-end-line="356" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -421,20 +424,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cloggy_dataset_maker.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="94" column="45" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data_resizer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        <state relative-caret-position="117">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

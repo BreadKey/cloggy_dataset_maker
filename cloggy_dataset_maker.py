@@ -354,7 +354,7 @@ class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
                 #directory is already exist
                 pass
 
-            cv2.imwrite(os.path.join(savePath, imageName), self.skeleton, 0)
+            cv2.imwrite(os.path.join(savePath, imageName), self.skeleton)
 
     def getImageName(self, path):
         if path is not None:
