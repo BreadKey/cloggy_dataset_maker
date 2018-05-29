@@ -8,7 +8,6 @@ from MakerUI import Ui_Maker_Dialog
 import cv2
 import numpy as np
 import imageProcessor as ip
-import matplotlib.pyplot as plt
 
 class cloggy_dataset_maker(QDialog, Ui_Maker_Dialog):
     def __init__(self):
