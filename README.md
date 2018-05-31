@@ -9,6 +9,7 @@ Python3 later
 opencv  
 numpy  
 scikit-image  
+PyQt5
 
 ## Usage
 python cloggy_dataset_maker.py
